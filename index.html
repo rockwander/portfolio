@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Your Name — Portfolio</title>
-  <meta name="description" content="Portfolio of Your Name — Software Engineer" />
+  <title>Your Name — Product Manager Portfolio</title>
+  <meta name="description" content="Portfolio of Your Name — Product Manager" />
   <link rel="stylesheet" href="assets/style.css" />
   <link rel="icon" href="data:,">
 </head>
@@ -14,7 +14,8 @@
       <a href="#home" class="brand">Your Name</a>
       <nav>
         <a href="#about">About</a>
-        <a href="#projects">Projects</a>
+        <a href="#projects">Shipped</a>
+        <a href="#pocs">POCs</a>
         <a href="#skills">Skills</a>
         <a href="#contact">Contact</a>
       </nav>
@@ -24,10 +25,10 @@
   <main>
     <section id="home" class="hero">
       <h1>Hi, I'm <span class="accent">Your Name</span></h1>
-      <p class="subtitle">Software Engineer building things for the web.</p>
+      <p class="subtitle">Product Manager building things that ship and solve real problems.</p>
       <div class="cta">
-        <a href="#projects" class="btn btn-primary">View Projects</a>
-        <a href="#contact" class="btn btn-outline">Get in Touch</a>
+        <a href="#projects" class="btn btn-primary">View Shipped Work</a>
+        <a href="#pocs" class="btn btn-outline">View POCs</a>
       </div>
     </section>
 
@@ -40,34 +41,51 @@
     </section>
 
     <section id="projects" class="section">
-      <h2>Projects</h2>
+      <h2>Shipped — Live in Production</h2>
+      <p class="section-intro">Products actually deployed and solving real problems for real users.</p>
       <div class="grid">
         <article class="card">
-          <h3>Project One</h3>
-          <p>Short description of the project goes here.</p>
+          <span class="status-badge status-live">Live</span>
+          <h3>QR Ordering</h3>
+          <p>Contactless, scan-to-order experience that lets customers browse the menu and place orders directly from their table.</p>
           <div class="tags">
-            <span class="tag">Tech</span>
-            <span class="tag">Stack</span>
+            <span class="tag">0&rarr;1</span>
+            <span class="tag">Consumer</span>
           </div>
-          <a href="#" class="card-link">View Project &rarr;</a>
         </article>
         <article class="card">
-          <h3>Project Two</h3>
-          <p>Short description of the project goes here.</p>
+          <span class="status-badge status-live">Live</span>
+          <h3>Frontline Daily Task Tracking</h3>
+          <p>A daily task management tool built for frontline teams to assign, track, and close out operational work in real time.</p>
           <div class="tags">
-            <span class="tag">Tech</span>
-            <span class="tag">Stack</span>
+            <span class="tag">Operations</span>
+            <span class="tag">Internal Tools</span>
           </div>
-          <a href="#" class="card-link">View Project &rarr;</a>
+        </article>
+      </div>
+    </section>
+
+    <section id="pocs" class="section">
+      <h2>Proof of Concepts</h2>
+      <p class="section-intro">Early-stage explorations validating new ideas before broader investment.</p>
+      <div class="grid">
+        <article class="card">
+          <span class="status-badge status-poc">POC</span>
+          <h3>AI Purchase Requisition</h3>
+          <p>An AI-assisted procurement workflow that streamlines how purchase requisitions are created, reviewed, and routed for approval.</p>
+          <div class="tags">
+            <span class="tag">Procurement</span>
+            <span class="tag">AI</span>
+          </div>
         </article>
         <article class="card">
-          <h3>Project Three</h3>
-          <p>Short description of the project goes here.</p>
+          <span class="status-badge status-poc">POC</span>
+          <h3>Composite UI</h3>
+          <p>A composable UI framework prototype enabling teams to assemble consistent interfaces from shared, reusable components.</p>
           <div class="tags">
-            <span class="tag">Tech</span>
-            <span class="tag">Stack</span>
+            <span class="tag">Platform</span>
+            <span class="tag">Design System</span>
           </div>
-          <a href="#" class="card-link">View Project &rarr;</a>
         </article>
       </div>
     </section>
