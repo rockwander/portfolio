@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>QR Ordering — Your Name</title>
+  <meta name="description" content="Case study: a no-login, table-based QR ordering and kitchen workflow system for a fast casual QSR." />
+  <link rel="stylesheet" href="../assets/style.css" />
+  <link rel="icon" href="data:,">
+</head>
+<body>
+  <header class="nav">
+    <div class="nav-inner">
+      <a href="../index.html" class="brand">Your Name</a>
+      <nav>
+        <a href="../index.html#projects">&larr; All projects</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="case-hero">
+      <span class="status-badge status-live">Live</span>
+      <h1>QR Ordering</h1>
+      <p class="subtitle">Ordering and internal workflows for a new-age fast casual QSR. No app, no login, no PII: scan, order, see the running bill.</p>
+      <div class="tags">
+        <span class="tag">0&rarr;1</span>
+        <span class="tag">Consumer</span>
+        <span class="tag">Restaurant Ops</span>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>The Problem</h2>
+      <p class="section-intro">One restaurant with too few staff, a varied menu and a bill nobody could see until the end.</p>
+      <ol class="numbered">
+        <li>
+          <h3>Stretched floor staff</h3>
+          <p>One waiter covered the entire dining area, which seats 28.</p>
+        </li>
+        <li>
+          <h3>Customers felt unattended</h3>
+          <p>With so few staff, guests waited to order, to ask questions and to get help.</p>
+        </li>
+        <li>
+          <h3>Lost upsell opportunity</h3>
+          <p>No one had time to recommend beverages and desserts, which meant a lower average order value (AOV).</p>
+        </li>
+        <li>
+          <h3>Kitchen strain from a scattered menu</h3>
+          <p>The menu needs variety to keep regulars interested. But when everyone orders from a different part of it, the kitchen gets overloaded and serves fewer orders.</p>
+        </li>
+        <li>
+          <h3>No visibility into the running bill</h3>
+          <p>Customers pay after dining, so while ordering they can't easily see what they've ordered or how much they owe. Many restaurants use this to push extra orders. We bet that being open about the bill would build trust and bring customers back.</p>
+        </li>
+      </ol>
+    </section>
+
+    <section class="section">
+      <h2>Insights</h2>
+      <p class="section-intro">Why existing QR ordering apps don't work.</p>
+      <div class="grid">
+        <article class="card">
+          <h3>App installs</h3>
+          <p>Many ask customers to install an app, and then send push notifications for months afterwards.</p>
+        </article>
+        <article class="card">
+          <h3>PII and logins</h3>
+          <p>Even the browser-based ones (PWAs) ask for a name, phone number and login. Nobody wants to give a restaurant their number just to order, only to get WhatsApp promos later.</p>
+        </article>
+        <article class="card">
+          <h3>Small-screen menus</h3>
+          <p>Browsing a menu on a phone is hard, especially while eating, and sorting or filtering isn't practical mid-meal. People go back to the paper menu and the waiter.</p>
+        </article>
+        <article class="card">
+          <h3>Heavy group linking</h3>
+          <p>To add a friend's order from their phone, the host shares an OTP and the friend types it in to link the two. That level of security belongs in a banking app, not a shared restaurant bill.</p>
+        </article>
+        <article class="card">
+          <h3>Prepayment friction</h3>
+          <p>Apps that make customers pay up front run into refunds and order changes whenever an item turns out to be unavailable.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>The Solution</h2>
+
+      <div class="subsection">
+        <h3>Ordering flow</h3>
+        <ul class="checklist">
+          <li>Each QR code belongs to one table.</li>
+          <li>Anyone who scans the table's QR adds to the same bill. No OTPs and no linking.</li>
+          <li>No PII: scan, add items and place the order.</li>
+          <li>Every time someone places an order, they see everything already ordered and the bill so far.</li>
+          <li>Customers can check the total and the item list at any time.</li>
+          <li>A <strong>Call waiter</strong> button asks a waiter to come to the table.</li>
+        </ul>
+      </div>
+
+      <div class="subsection">
+        <h3>Payment</h3>
+        <ul class="checklist">
+          <li>To keep it simple and avoid compliance risk, customers see the total and pay outside the platform by scanning a Google Pay QR.</li>
+          <li>When the waiter confirms the payment, they mark the bill complete. The table's QR then clears, ready for the next customers.</li>
+        </ul>
+      </div>
+
+      <div class="subsection">
+        <h3>Promotions</h3>
+        <ul class="checklist">
+          <li><strong>Highlighted items</strong> promote popular dishes and steer customers towards a smaller set of items, which keeps the kitchen running smoothly.</li>
+          <li><strong>Instagram Story-style slides</strong> feature popular and special items, the restaurant's values and its quality standards. They tell the brand's story while people are on their phones waiting for food.</li>
+        </ul>
+      </div>
+
+      <div class="subsection">
+        <h3>Internal workflow</h3>
+        <p>A bill is made up of several orders, which can come in one after another. Each order moves through three stages, and each stage has a clear owner:</p>
+        <div class="pipeline">
+          <div class="stage">
+            <span class="stage-owner">Kitchen</span>
+            <h4>New orders</h4>
+            <p>Orders arrive as they're placed, so the kitchen can start preparing straight away. Staff mark an order done to keep the queue clean and spot new ones quickly.</p>
+          </div>
+          <div class="stage">
+            <span class="stage-owner">Waiter</span>
+            <h4>Bills to settle</h4>
+            <p>Shows the waiter which tables still need to pay. After payment, they mark the bill settled and the table QR resets.</p>
+          </div>
+          <div class="stage">
+            <span class="stage-owner">Record</span>
+            <h4>Settled bills</h4>
+            <p>A record of completed, paid bills.</p>
+          </div>
+        </div>
+
+        <h3 class="mt">Kitchen station view</h3>
+        <p>Each kitchen station handles one kind of food, so it gets its own view. New items in the queue are grouped by a category that the admin sets up. The view can be filtered by admin category, menu category or table number.</p>
+        <p class="callout">The menu is grouped the way customers think about and eat the food. The kitchen often wants to group the same items differently to run each station efficiently. So we added a separate <strong>admin category</strong> that's used only inside the kitchen.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>&copy; <span id="year"></span> Your Name. All rights reserved.</p>
+  </footer>
+
+  <script src="../assets/script.js"></script>
+</body>
+</html>

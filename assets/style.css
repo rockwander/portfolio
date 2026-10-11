@@ -218,12 +218,144 @@ h1, h2, h3 {
   border-top: 1px solid var(--border);
 }
 
+/* Case study pages */
+.case-hero {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 4rem 1.5rem 2rem;
+}
+
+.case-hero h1 {
+  font-size: 2.5rem;
+  margin: 0 0 0.5rem;
+}
+
+.case-hero .subtitle {
+  margin-bottom: 1rem;
+}
+
+.numbered {
+  list-style: none;
+  counter-reset: item;
+  padding: 0;
+  margin: 0;
+}
+
+.numbered li {
+  counter-increment: item;
+  position: relative;
+  padding-left: 3rem;
+  margin-bottom: 1.5rem;
+}
+
+.numbered li::before {
+  content: counter(item, decimal-leading-zero);
+  position: absolute;
+  left: 0;
+  top: 0.1rem;
+  color: var(--accent);
+  font-weight: 700;
+}
+
+.numbered h3 {
+  margin: 0 0 0.25rem;
+  font-size: 1.05rem;
+}
+
+.numbered p {
+  margin: 0;
+  color: var(--text-muted);
+}
+
+.subsection {
+  margin-top: 2.5rem;
+}
+
+.subsection h3 {
+  font-size: 1.2rem;
+  margin-bottom: 0.75rem;
+}
+
+.subsection p {
+  color: var(--text-muted);
+}
+
+.mt {
+  margin-top: 2rem;
+}
+
+.checklist {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.checklist li {
+  position: relative;
+  padding-left: 1.5rem;
+  margin-bottom: 0.6rem;
+  color: var(--text-muted);
+}
+
+.checklist li::before {
+  content: "\2192";
+  position: absolute;
+  left: 0;
+  color: var(--accent);
+}
+
+.checklist strong,
+.subsection p strong {
+  color: var(--text);
+}
+
+.pipeline {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.stage {
+  background: var(--bg-alt);
+  border: 1px solid var(--border);
+  border-top: 3px solid var(--accent);
+  border-radius: 10px;
+  padding: 1.25rem;
+}
+
+.stage h4 {
+  margin: 0.5rem 0;
+  font-size: 1rem;
+}
+
+.stage p {
+  margin: 0;
+  font-size: 0.9rem;
+}
+
+.stage-owner {
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--accent);
+}
+
+.callout {
+  border-left: 3px solid var(--accent);
+  background: var(--bg-alt);
+  padding: 1rem 1.25rem;
+  border-radius: 0 8px 8px 0;
+}
+
 @media (max-width: 600px) {
   .nav nav a {
     margin-left: 1rem;
     font-size: 0.9rem;
   }
-  .hero h1 {
+  .hero h1,
+  .case-hero h1 {
     font-size: 2rem;
   }
 }
