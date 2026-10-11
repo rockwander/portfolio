@@ -204,6 +204,15 @@ h1, h2, h3 {
   font-size: 0.9rem;
 }
 
+.skill-groups {
+  display: grid;
+  gap: 0.5rem;
+}
+
+.skill-group .skills-list {
+  margin: 0.5rem 0 0;
+}
+
 .social {
   margin-top: 1rem;
   display: flex;
